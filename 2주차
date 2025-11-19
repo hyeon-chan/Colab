@@ -1,0 +1,314 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM9ooSGRaOh2xuDa99Xm8yC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hyeon-chan/Colab/blob/main/2%EC%A3%BC%EC%B0%A8\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#실습 3-1\n",
+        "20255284 지현찬"
+      ],
+      "metadata": {
+        "id": "wXOEPA24fVHI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KNl08waOfCDs",
+        "outputId": "bbc0d979-e3b6-45cc-8e40-855564cd88aa"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A= [[1 2 3]\n",
+            " [4 5 6]\n",
+            " [7 8 9]]\n",
+            "A.shape= (3, 3)\n"
+          ]
+        }
+      ],
+      "source": [
+        "#comment 넣기\n",
+        "import numpy as np\n",
+        "\n",
+        "A=np.array([[1,2,3],\n",
+        "            [4,5,6],\n",
+        "            [7,8,9]])\n",
+        "print(\"A=\",A)\n",
+        "print(\"A.shape=\", A.shape)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1장 문제2"
+      ],
+      "metadata": {
+        "id": "A-3vNYlYj0nQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "A=np.array([[1,2,3],  #3x3 행렬 A 생성\n",
+        "            [4,5,6],\n",
+        "            [7,8,9]])\n",
+        "\n",
+        "v = np.array([[1],    #3x1 행렬인 벡터 v 생성\n",
+        "              [2],\n",
+        "              [3]])\n",
+        "print(\"A =\",A)\n",
+        "print(\"v =\",v)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uno6cDLvjz7M",
+        "outputId": "2930a7c9-2e33-44fe-ea3a-3159d4a2aa61"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A = [[1 2 3]\n",
+            " [4 5 6]\n",
+            " [7 8 9]]\n",
+            "v = [[1]\n",
+            " [2]\n",
+            " [3]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2장 문제1"
+      ],
+      "metadata": {
+        "id": "ZkHIs4SKkWg8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "a = np.zeros((2, 3))    #2x3 영행렬\n",
+        "print(\"a =\", a)\n",
+        "\n",
+        "b = np.ones((2, 2))     #모든 성분이 1인 2x2 행렬\n",
+        "print(\"b =\", b)\n",
+        "\n",
+        "c = np.full((3, 2), 3)  #모든 성분이 3인 3x2 행렬\n",
+        "print(\"c =\", c)\n",
+        "\n",
+        "d = np.eye(2)           #2x2 단위행렬\n",
+        "print(\"d =\", d)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6w_VPP4EkOSW",
+        "outputId": "d120e77a-5784-42b9-fc3a-df7faa84d12a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a = [[0. 0. 0.]\n",
+            " [0. 0. 0.]]\n",
+            "b = [[1. 1.]\n",
+            " [1. 1.]]\n",
+            "c = [[3 3]\n",
+            " [3 3]\n",
+            " [3 3]]\n",
+            "d = [[1. 0.]\n",
+            " [0. 1.]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3장 문제2"
+      ],
+      "metadata": {
+        "id": "WtrunKHXlMy5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "# 행렬 A를 출력하는 함수\n",
+        "def pprint(msg, A):\n",
+        "    print(\"---\", msg, \"---\")\n",
+        "    (n, m) = A.shape\n",
+        "    for i in range(0, n):\n",
+        "        line = \"\"\n",
+        "        for j in range(0, m):\n",
+        "            line += \"{0:.2f}\".format(A[i, j]) + \"\\t\"\n",
+        "        print(line)\n",
+        "    print(\"\")\n",
+        "\n",
+        "A = np.array([[1., 2.], [3., 4.]])\n",
+        "B = np.array([[2., 2.], [1., 3.]])\n",
+        "C = np.array([[4., 5., 6.], [7., 8., 9.]])\n",
+        "v = np.array([[10.], [20.]])\n",
+        "\n",
+        "pprint(\"A+B\", A+B)   # 행렬의 합 A+B\n",
+        "pprint(\"A-B\", A-B)   # 행렬의 차 A-B\n",
+        "\n",
+        "pprint(\"3*A \", 3*A)  # 행렬의 스칼라배 3A\n",
+        "pprint(\"2*v \", 2*v)  # 벡터의 스칼라배 2v\n",
+        "\n",
+        "pprint(\"matmul(A,B)\", np.matmul(A, B))  # 행렬의 곱 AB\n",
+        "pprint(\"matmul(A,C)\", np.matmul(A, C))  # 행렬의 곱 AC\n",
+        "pprint(\"A*v\", A@v)                      # 행렬과 벡터의 곱 Av\n",
+        "\n",
+        "pprint(\"matrix_power(A, 2)\", np.linalg.matrix_power(A, 2))  # 행렬의 거듭제곱 A²\n",
+        "pprint(\"matrix_power(A, 3)\", np.linalg.matrix_power(A, 3))  # 행렬의 거듭제곱 A³\n",
+        "\n",
+        "pprint(\"A*B\", A*B)     # 행렬의 성분별 곱셈 A*B\n",
+        "pprint(\"A/B\", A/B)     # 행렬의 성분별 나눗셈 A/B\n",
+        "pprint(\"A**2 == A*A\", A**2)  # 행렬의 성분별 거듭제곱\n",
+        "\n",
+        "pprint(\"A.T\", A.T)   # 행렬의 전치 AT\n",
+        "pprint(\"v.T\", v.T)   # 벡터의 전치 vT\n",
+        "\n",
+        "M = np.diag([1, 2, 3])   # 대각행렬 diag(1,2,3) 생성\n",
+        "pprint(\"diag(1,2,3) =\", M)\n",
+        "\n",
+        "D11 = np.array([[1, 2], [3, 4]])\n",
+        "D12 = np.array([[5], [6]])\n",
+        "D21 = np.array([[7, 7]])\n",
+        "D22 = np.array([[8]])\n",
+        "D = np.block([[D11, D12], [D21, D22]])  # 블록행렬 D 생성\n",
+        "pprint(\"block matrix\", D)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hOZ-HK3slm__",
+        "outputId": "a013aa65-22aa-4760-a0d7-639a3fd8cc15"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--- A+B ---\n",
+            "3.00\t4.00\t\n",
+            "4.00\t7.00\t\n",
+            "\n",
+            "--- A-B ---\n",
+            "-1.00\t0.00\t\n",
+            "2.00\t1.00\t\n",
+            "\n",
+            "--- 3*A  ---\n",
+            "3.00\t6.00\t\n",
+            "9.00\t12.00\t\n",
+            "\n",
+            "--- 2*v  ---\n",
+            "20.00\t\n",
+            "40.00\t\n",
+            "\n",
+            "--- matmul(A,B) ---\n",
+            "4.00\t8.00\t\n",
+            "10.00\t18.00\t\n",
+            "\n",
+            "--- matmul(A,C) ---\n",
+            "18.00\t21.00\t24.00\t\n",
+            "40.00\t47.00\t54.00\t\n",
+            "\n",
+            "--- A*v ---\n",
+            "50.00\t\n",
+            "110.00\t\n",
+            "\n",
+            "--- matrix_power(A, 2) ---\n",
+            "7.00\t10.00\t\n",
+            "15.00\t22.00\t\n",
+            "\n",
+            "--- matrix_power(A, 3) ---\n",
+            "37.00\t54.00\t\n",
+            "81.00\t118.00\t\n",
+            "\n",
+            "--- A*B ---\n",
+            "2.00\t4.00\t\n",
+            "3.00\t12.00\t\n",
+            "\n",
+            "--- A/B ---\n",
+            "0.50\t1.00\t\n",
+            "3.00\t1.33\t\n",
+            "\n",
+            "--- A**2 == A*A ---\n",
+            "1.00\t4.00\t\n",
+            "9.00\t16.00\t\n",
+            "\n",
+            "--- A.T ---\n",
+            "1.00\t3.00\t\n",
+            "2.00\t4.00\t\n",
+            "\n",
+            "--- v.T ---\n",
+            "10.00\t20.00\t\n",
+            "\n",
+            "--- diag(1,2,3) = ---\n",
+            "1.00\t0.00\t0.00\t\n",
+            "0.00\t2.00\t0.00\t\n",
+            "0.00\t0.00\t3.00\t\n",
+            "\n",
+            "--- block matrix ---\n",
+            "1.00\t2.00\t5.00\t\n",
+            "3.00\t4.00\t6.00\t\n",
+            "7.00\t7.00\t8.00\t\n",
+            "\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
