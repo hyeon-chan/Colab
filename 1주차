@@ -1,0 +1,177 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "mount_file_id": "1yaRl82YEALvFTAOfAo0MPbReXl4XnDNN",
+      "authorship_tag": "ABX9TyMUUqqG8cHEtByAJYfAU5ue",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hyeon-chan/Colab/blob/main/1%EC%A3%BC%EC%B0%A8\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Colab 실행 예제\n",
+        "python의 print 함수를 이용하여 Hello world를 출력합니다."
+      ],
+      "metadata": {
+        "id": "xQEeHLqOb-P2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BM7U-kipbhQT",
+        "outputId": "0f51ce5f-8c6b-4e69-91d4-ca5a26e1e5d7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello world\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Hello world\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "이번엔 곱셈과 덧셈을 시켜봅시다."
+      ],
+      "metadata": {
+        "id": "LYDj1BOxcbqH"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "3 * 4"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "segztmjtcO7C",
+        "outputId": "a793bafb-50ba-4b88-df98-fbcabc2159b8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "12"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "12348 + 2318"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "60ZLvwtxcvHM",
+        "outputId": "fc125aa8-1edb-477a-d203-cbec37b6bfa5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "14666"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Hello world\")\n",
+        "print(3*5)\n",
+        "print(12345 + 2345)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D_RhBvjScy42",
+        "outputId": "51e98b98-30c6-4093-96e8-d5c7120c68dc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello world\n",
+            "15\n",
+            "14690\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5NPLYQKJdf_D",
+        "outputId": "1e9e719d-bf48-48d6-ae16-bbbd4121ac2a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mounted at /content/drive\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
