@@ -1,0 +1,134 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN0zudEWKRzAM/rDj5QUPKQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hyeon-chan/Colab/blob/main/colab\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "X1Y9v-Tg1ldu"
+      },
+      "outputs": [],
+      "source": [
+        "실습번호 5"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "from numpy.linalg import det, inv\n",
+        "\n",
+        "A19a = np.array([\n",
+        "    [3, 2, 5, 6],\n",
+        "    [6, 5, 6, 7],\n",
+        "    [0, 0, 4, 8],\n",
+        "    [0, 0, 2, 5]\n",
+        "])\n",
+        "\n",
+        "A19b = np.array([\n",
+        "    [0, 5, 2, 3, -1],\n",
+        "    [-5, 0, 6, 7, 2],\n",
+        "    [-2, -6, 0, 4, 8],\n",
+        "    [-3, -7, -4, 0, 1],\n",
+        "    [1, -2, -8, -1, 0]\n",
+        "])\n",
+        "\n",
+        "A19c = np.array([\n",
+        "    [5, 6, 0, 0],\n",
+        "    [3, 7, 0, 0],\n",
+        "    [1, 2, 2, 1],\n",
+        "    [3, 1, 3, 7]\n",
+        "])\n",
+        "\n",
+        "print(\"문제 19\")\n",
+        "print(\"(a) |A| =\", round(det(A19a), 3))\n",
+        "print(\"(b) |A| =\", round(det(A19b), 3))\n",
+        "print(\"(c) |A| =\", round(det(A19c), 3))\n",
+        "\n",
+        "A27a = np.array([\n",
+        "    [2, 5, 5],\n",
+        "    [-1, -1, 0],\n",
+        "    [2, 4, 3]\n",
+        "])\n",
+        "\n",
+        "A27b = np.array([\n",
+        "    [1, 0, 1],\n",
+        "    [0, 1, 1],\n",
+        "    [2, 0, 1]\n",
+        "])\n",
+        "\n",
+        "A27c = np.array([\n",
+        "    [2, 1, 2],\n",
+        "    [3, 2, 2],\n",
+        "    [1, 2, 3]\n",
+        "])\n",
+        "\n",
+        "print(\"\\n문제 27\")\n",
+        "print(\"(a) A^(-1) =\\n\", np.round(inv(A27a), 3))\n",
+        "print(\"\\n(b) A^(-1) =\\n\", np.round(inv(A27b), 3))\n",
+        "print(\"\\n(c) A^(-1) =\\n\", np.round(inv(A27c), 3))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BUNhto2B1wAV",
+        "outputId": "d57ff983-bd40-4b48-d837-0efc04c23bcb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "문제 19\n",
+            "(a) |A| = 12.0\n",
+            "(b) |A| = -0.0\n",
+            "(c) |A| = 187.0\n",
+            "\n",
+            "문제 27\n",
+            "(a) A^(-1) =\n",
+            " [[ 3. -5. -5.]\n",
+            " [-3.  4.  5.]\n",
+            " [ 2. -2. -3.]]\n",
+            "\n",
+            "(b) A^(-1) =\n",
+            " [[-1.  0.  1.]\n",
+            " [-2.  1.  1.]\n",
+            " [ 2.  0. -1.]]\n",
+            "\n",
+            "(c) A^(-1) =\n",
+            " [[ 0.4  0.2 -0.4]\n",
+            " [-1.4  0.8  0.4]\n",
+            " [ 0.8 -0.6  0.2]]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
